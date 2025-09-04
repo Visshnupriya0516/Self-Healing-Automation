@@ -39,20 +39,20 @@ Perfect for automating **UI testing**, reducing flaky failures, and providing ac
 ## 📂 Project Structure
 
 ```
-
-self-healing-framework
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   ├── com.selfhealing.base    # BaseTest, BasePage
-│   │   │   ├── com.selfhealing.pages   # Page Objects (LoginPage, etc.)
-│   │   │   ├── com.selfhealing.utils   # RetryAnalyzer, RetryListener
-│   ├── test
-│   │   ├── java
-│   │   │   ├── com.selfhealing.tests   # TestNG test classes (LoginTest)
-├── pom.xml
-└── README.md
-
+self-healing-framework/
+├── src/
+│ ├── main/java/com/selfhealing/
+│ │ ├── core/ # DriverFactory, ConfigManager, HealingEngine
+│ │ ├── pages/ # Page Objects (LoginPage, etc.)
+│ │ └── utils/ # LoggerUtil, ScreenshotUtil, etc.
+│ └── test/java/com/selfhealing/
+│ ├── tests/ # Test Cases (LoginTest)
+│ └── utils/ # RetryAnalyzer, RetryListener
+│
+├── logs/ # Execution logs
+├── target/ # Build output & Allure results
+├── pom.xml # Maven dependencies
+└── README.md # Documentation
 ````
 
 ---

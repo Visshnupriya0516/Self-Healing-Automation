@@ -3,10 +3,13 @@ package com.selfhealing.tests;
 import com.selfhealing.core.DriverFactory;
 import com.selfhealing.core.ConfigManager;
 import com.selfhealing.utils.LoggerUtil;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import com.selfhealing.utils.ScreenshotUtil;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
@@ -25,8 +28,7 @@ public class BaseTest {
             if (baseUrl == null || baseUrl.isEmpty()) {
                 LoggerUtil.getLogger().warn("No baseUrl found in config.properties. Skipping navigation.");
             } else {
-                getDriver().get(baseUrl);
-                LoggerUtil.getLogger().info("Navigated to base URL: {}", baseUrl);
+                openBaseUrl(baseUrl);
             }
         } catch (Exception e) {
             LoggerUtil.getLogger().error("Exception during test setup: {}", e.getMessage(), e);
@@ -35,8 +37,14 @@ public class BaseTest {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
         try {
+            // 📸 Attach screenshot to Allure if test failed
+            if (result.getStatus() == ITestResult.FAILURE) {
+                LoggerUtil.getLogger().error("Test failed: Capturing and attaching screenshot...");
+                attachScreenshot();
+            }
+
             if (getDriver() != null) {
                 LoggerUtil.getLogger().info("Closing WebDriver...");
                 DriverFactory.quitDriver();
@@ -48,7 +56,7 @@ public class BaseTest {
         }
     }
 
-    // ✅ Added getter method so tests can access WebDriver safely
+    // ✅ Safe WebDriver access
     protected WebDriver getDriver() {
         return DriverFactory.getDriver();
     }
@@ -61,5 +69,11 @@ public class BaseTest {
         } else {
             LoggerUtil.getLogger().error("Cannot open URL. Either driver is null or URL is empty.");
         }
+    }
+
+    // 🔗 Attach screenshot to Allure
+    @Attachment(value = "Failure Screenshot", type = "image/png")
+    public byte[] attachScreenshot() {
+        return ScreenshotUtil.takeScreenshot();
     }
 }

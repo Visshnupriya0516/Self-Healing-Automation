@@ -1,41 +1,56 @@
 package com.selfhealing.pages;
 
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
+import com.selfhealing.utils.ScreenshotUtil;
+import com.selfhealing.utils.LoggerUtil;
 import org.openqa.selenium.By;
 import java.util.Arrays;
 import java.util.List;
 
 public class LoginPage extends BasePage {
 
-    // Primary + fallback locators for username field
     private final List<By> usernameLocators = Arrays.asList(
-            By.id("wrong-id"),                    // intentionally broken to test healing
-            By.id("username"),                    // correct locator on demo site
-            By.xpath("//input[@name='username']")  // fallback locator
+            By.id("wrong-id"),
+            By.id("username"),
+            By.xpath("//input[@name='username']")
     );
 
-    // Primary + fallback locators for password field
     private final List<By> passwordLocators = Arrays.asList(
-            By.id("password"),                     // correct locator
+            By.id("password"),
             By.name("password"),
             By.xpath("//input[@type='password']")
     );
 
-    // Primary + fallback locators for login button
     private final List<By> loginButtonLocators = Arrays.asList(
-            By.id("loginBtn"),                     // intentionally wrong to simulate healing
-            By.cssSelector("button[type='submit']"), // correct locator
+            By.id("loginBtn"),
+            By.cssSelector("button[type='submit']"),
             By.xpath("//button[contains(text(),'Login')]")
     );
 
+    @Step("Enter username: {username}")
     public void enterUsername(String username) {
+        LoggerUtil.getLogger().info("Typing username...");
         type(usernameLocators, username);
+        attachScreenshot("After entering username");
     }
 
+    @Step("Enter password: [HIDDEN]")
     public void enterPassword(String password) {
+        LoggerUtil.getLogger().info("Typing password...");
         type(passwordLocators, password);
+        attachScreenshot("After entering password");
     }
 
+    @Step("Click on login button")
     public void clickLogin() {
+        LoggerUtil.getLogger().info("Clicking login button...");
         click(loginButtonLocators);
+        attachScreenshot("After clicking login");
+    }
+
+    @Attachment(value = "{stepName}", type = "image/png")
+    private byte[] attachScreenshot(String stepName) {
+        return ScreenshotUtil.takeScreenshot();
     }
 }
