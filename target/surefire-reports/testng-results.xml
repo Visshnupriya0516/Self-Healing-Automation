@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-04T14:16:21 IST" name="Surefire suite" finished-at="2025-09-04T14:16:33 IST" duration-ms="12606">
+    <groups>
+    </groups>
+    <test started-at="2025-09-04T14:16:21 IST" name="Surefire test" finished-at="2025-09-04T14:16:33 IST" duration-ms="12606">
+      <class name="com.selfhealing.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.selfhealing.tests.LoginTest@6fefce9e]" started-at="2025-09-04T14:16:21 IST" name="setUp" finished-at="2025-09-04T14:16:32 IST" duration-ms="11259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:0, instance:com.selfhealing.tests.LoginTest@6fefce9e]" started-at="2025-09-04T14:16:32 IST" name="testLogin" finished-at="2025-09-04T14:16:33 IST" duration-ms="1037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.selfhealing.tests.LoginTest@6fefce9e]" started-at="2025-09-04T14:16:33 IST" name="tearDown" finished-at="2025-09-04T14:16:33 IST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.selfhealing.tests.LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

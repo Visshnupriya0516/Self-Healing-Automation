@@ -1,0 +1,13 @@
+ 
+{
+    "login.username": {
+      "xpath": "//input[@placeholder='Username']"
+    },
+    "login.password": {
+      "xpath": "//input[@placeholder='Password']"
+    },
+    "login.button": {
+      "css": "button[type='submit']"
+    }
+  }
+  

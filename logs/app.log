@@ -1,0 +1,45 @@
+[2025-09-04 13:05:54] [main] INFO  selfhealing - Initializing WebDriver...
+[2025-09-04 13:05:54] [main] INFO  selfhealing - Initializing driver. Browser=chrome, Remote=false, Headless=false
+[2025-09-04 13:05:56] [main] INFO  selfhealing - Driver initialized successfully.
+[2025-09-04 13:05:57] [main] INFO  selfhealing - Navigated to base URL: https://example.com
+[2025-09-04 13:05:57] [main] WARN  selfhealing - Primary locator failed: By.id: wrong-id
+[2025-09-04 13:05:57] [main] INFO  selfhealing - Closing WebDriver...
+[2025-09-04 13:05:57] [main] INFO  selfhealing - Driver closed and removed from ThreadLocal.
+[2025-09-04 13:09:18] [main] INFO  selfhealing - Initializing WebDriver...
+[2025-09-04 13:09:18] [main] INFO  selfhealing - Initializing driver. Browser=chrome, Remote=false, Headless=false
+[2025-09-04 13:09:21] [main] INFO  selfhealing - Driver initialized successfully.
+[2025-09-04 13:09:22] [main] INFO  selfhealing - Navigated to base URL: https://example.com
+[2025-09-04 13:09:22] [main] WARN  selfhealing - Locator failed: By.id: wrong-id
+[2025-09-04 13:09:22] [main] WARN  selfhealing - Locator failed: By.name: username
+[2025-09-04 13:09:22] [main] WARN  selfhealing - Locator failed: By.xpath: //input[@placeholder='Username']
+[2025-09-04 13:09:22] [main] INFO  selfhealing - Closing WebDriver...
+[2025-09-04 13:09:23] [main] INFO  selfhealing - Driver closed and removed from ThreadLocal.
+[2025-09-04 13:15:14] [main] INFO  selfhealing - Initializing WebDriver...
+[2025-09-04 13:15:14] [main] INFO  selfhealing - Initializing driver. Browser=chrome, Remote=false, Headless=false
+[2025-09-04 13:15:17] [main] INFO  selfhealing - Driver initialized successfully.
+[2025-09-04 13:15:24] [main] INFO  selfhealing - Navigated to base URL: https://the-internet.herokuapp.com/login
+[2025-09-04 13:15:24] [main] WARN  selfhealing - Locator failed: By.id: wrong-id
+[2025-09-04 13:15:24] [main] INFO  selfhealing - Element found with locator: By.id: username
+[2025-09-04 13:15:24] [main] INFO  selfhealing - Element found with locator: By.id: password
+[2025-09-04 13:15:24] [main] WARN  selfhealing - Locator failed: By.id: loginBtn
+[2025-09-04 13:15:25] [main] INFO  selfhealing - Element found with locator: By.cssSelector: button[type='submit']
+[2025-09-04 13:15:25] [main] INFO  selfhealing - Closing WebDriver...
+[2025-09-04 13:15:26] [main] INFO  selfhealing - Driver closed and removed from ThreadLocal.
+[2025-09-04 13:21:20] [main] INFO  selfhealing - Initializing WebDriver...
+[2025-09-04 13:21:20] [main] INFO  selfhealing - Initializing driver. Browser=chrome, Remote=false, Headless=false
+[2025-09-04 13:21:21] [main] INFO  selfhealing - Driver initialized successfully.
+[2025-09-04 13:21:26] [main] INFO  selfhealing - Navigated to base URL: https://the-internet.herokuapp.com/login
+[2025-09-04 13:21:27] [main] INFO  selfhealing - Closing WebDriver...
+[2025-09-04 13:21:27] [main] INFO  selfhealing - Driver closed and removed from ThreadLocal.
+[2025-09-04 13:33:13] [main] INFO  selfhealing - Initializing WebDriver...
+[2025-09-04 13:33:13] [main] INFO  selfhealing - Initializing driver. Browser=chrome, Remote=false, Headless=false
+[2025-09-04 13:33:14] [main] INFO  selfhealing - Driver initialized successfully.
+[2025-09-04 13:33:18] [main] INFO  selfhealing - Navigated to base URL: https://the-internet.herokuapp.com/login
+[2025-09-04 13:33:19] [main] INFO  selfhealing - Closing WebDriver...
+[2025-09-04 13:33:19] [main] INFO  selfhealing - Driver closed and removed from ThreadLocal.
+[2025-09-04 14:16:21] [main] INFO  selfhealing - Initializing WebDriver...
+[2025-09-04 14:16:21] [main] INFO  selfhealing - Initializing driver. Browser=chrome, Remote=false, Headless=false
+[2025-09-04 14:16:24] [main] INFO  selfhealing - Driver initialized successfully.
+[2025-09-04 14:16:32] [main] INFO  selfhealing - Navigated to base URL: https://the-internet.herokuapp.com/login
+[2025-09-04 14:16:33] [main] INFO  selfhealing - Closing WebDriver...
+[2025-09-04 14:16:33] [main] INFO  selfhealing - Driver closed and removed from ThreadLocal.
