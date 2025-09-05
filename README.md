@@ -1,9 +1,4 @@
- Perfect! 🚀 Let’s make this project **GitHub-ready & interview-ready**.
-Here’s a **professional README.md** you can directly put into your project root folder.
 
----
-
-```markdown
 # 🧠 Self-Healing Test Automation Framework  
 
 A **Java-based, production-grade test automation framework** with **Self-Healing Locators**, **Retry Logic**, **Allure Reporting**, and **Clean Page Object Model (POM) Design**.  
